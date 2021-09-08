@@ -1,0 +1,27 @@
+public SpriteRenderer spriteRenderer;
+public Animator animator;
+
+spriteRenderer.flipX = false;
+animator.SetBool("Run",true);
+
+spriteRenderer.flipX = true;
+animator.SetBool("Run",true);
+
+
+animator.SetBool("Run",false);
+
+if(CheckGround.isGrounded==false)
+{
+animator.SetBool("Jump",true);
+animator.SetBool("Run",false);
+}
+if(CheckGround.isGrounded==true)
+{
+animator.SetBool("Jump", true);
+animator.SetBool("Run", false);
+}
+
+if(CheckGround.isGrounded==false)
+{
+animator.SetBool("Jump", false);
+}
